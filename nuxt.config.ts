@@ -1,16 +1,12 @@
-import { build, defineNuxtConfig } from 'nuxt'
- 
+// @ts-nocheck
+import { defineNuxtConfig } from "nuxt";
+import dsv from "@rollup/plugin-dsv";
+
 export default defineNuxtConfig({
-    modules: ['@nuxtjs/tailwindcss'],
-    build: {
-        postcss: {
-            postcssOptions: {
-                plugins: {
-                    tailwindcss: {},
-                    autoprefixer: {},
-                },
-            }
-        }
-    },
-    css: ['@/assets/css/main.css',],
-})
+  modules: ["@nuxtjs/tailwindcss"],
+  css: ["@/assets/css/main.css"],
+  vite: {
+    plugins: [dsv()],
+  },
+  ssr: false,
+});
