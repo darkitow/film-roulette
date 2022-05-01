@@ -98,14 +98,14 @@ export default {
     <div class="header">
       <div class="header-items">
         <div class="flex flex-1 h-fit">
-          <img src="~/assets/info.svg" class="icon" @click="open(info - box)" />
+          <img src="~/assets/info.svg" class="icon" @click="open('info-box')" />
         </div>
         <h1 class="text-3xl font-semibold">Wordle</h1>
         <div class="flex justify-end flex-1 h-fit">
           <img
             src="~/assets/settings.svg"
             class="icon"
-            @click="open(settings - box)"
+            @click="open('settings-box')"
           />
         </div>
       </div>
@@ -116,9 +116,8 @@ export default {
         <Card
           v-for="(film, i) in films"
           :film="film"
-          :i="i"
           :key="i"
-          @flip="grayFilm"
+          @flip="grayFilm(i)"
         ></Card>
       </div>
       <div

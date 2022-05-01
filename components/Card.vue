@@ -16,7 +16,6 @@
 export default {
   props: {
     film: Object,
-    i: Number,
   },
 
   methods: {
