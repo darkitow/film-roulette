@@ -1,0 +1,15 @@
+{
+  "node_modules/nuxt/dist/app/entry.mjs": {
+    "file": "entry-c535df27.mjs",
+    "src": "node_modules/nuxt/dist/app/entry.mjs",
+    "isEntry": true,
+    "css": [
+      "entry.3aef7c06.css"
+    ],
+    "assets": [
+      "info.7eeca1ed.svg",
+      "settings.b336eb13.svg",
+      "x.3ee6ebab.svg"
+    ]
+  }
+}
