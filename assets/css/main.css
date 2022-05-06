@@ -1,4 +1,4 @@
-html,body,div {
+html,body, #__nuxt {
     height:100%;
     width:100%;
 }
@@ -22,6 +22,28 @@ a {
 
 svg {
     color:#fff;
+}
+
+.abs {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.backdrop {
+    height: 50%;
+    min-width: 100%;
+    overflow: hidden;
+}
+
+.backdrop img {
+    object-fit: cover;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+.backdrop div {
+    background: linear-gradient(to bottom, #24253200, #242532)
 }
 
 .header-items {
@@ -71,13 +93,25 @@ svg {
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 10px;
-    width: 8rem;
-    height: 3rem;
+    border-radius: 6px;
+    font-size: 1rem;
+    width: 7.25rem;
+    height: 2.75rem;
 }
 
 .icon {
     width: 40px;
     height: 40px;
     padding: 0.5rem;
+}
+
+.chosen {
+    aspect-ratio: 460/690;
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
+    object-fit: cover;
+    border-radius: 20px;
+    overflow: hidden;
+    filter: drop-shadow(8px 8px 8px #00000064);
 }

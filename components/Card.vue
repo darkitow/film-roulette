@@ -1,12 +1,12 @@
 <template>
-  <div class="card">
+  <div class="card" :class="[!film?.hidden && !film?.gray && 'scale-110']">
     <div class="inner" :class="[!film?.hidden && 'flip']">
       <div class="back" @click="flip"></div>
       <img
         class="front"
-        :class="[film?.gray && 'grayed']"
+        :class="[film?.gray && 'grayed', !film?.gray && 'last']"
         @click="open"
-        :src="film?.src"
+        :src="film?.src_small"
       />
     </div>
   </div>
@@ -35,10 +35,12 @@ export default {
 .card {
   min-width: auto;
   min-height: auto;
-  aspect-ratio: 460/690;
+  aspect-ratio: 125/187;
   background-color: transparent;
   perspective: 1000px;
   filter: drop-shadow(4px 4px 4px #00000064);
+
+  transition: transform 1s;
 }
 
 .inner {
